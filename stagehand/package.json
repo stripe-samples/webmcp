@@ -1,0 +1,26 @@
+{
+  "name": "stripe-webmcp-stagehand",
+  "version": "0.0.0",
+  "private": true,
+  "description": "List the WebMCP tools exposed by a Stripe page using Stagehand.",
+  "license": "MIT",
+  "type": "module",
+  "packageManager": "pnpm@10.32.1",
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env index.ts",
+    "lint": "biome check .",
+    "format": "biome check --write .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@browserbasehq/stagehand": "^4.1.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.14",
+    "@types/node": "24.x",
+    "typescript": "~5.9.3"
+  }
+}

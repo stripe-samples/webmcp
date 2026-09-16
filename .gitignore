@@ -1,0 +1,15 @@
+node_modules/
+.pnpm-store/
+package-lock.json
+yarn.lock
+.env*
+.eve
+.vercel
+.next
+.output
+.nitro
+dist
+.DS_Store
+*.tsbuildinfo
+.env*.local
+!.env.example
