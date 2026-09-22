@@ -14,7 +14,7 @@ try {
   await page.goto(url);
 
   const deadline = Date.now() + 30_000;
-  
+
   let tools = await page.tools();
   while (tools.length === 0 && Date.now() < deadline) {
     await page.waitForTimeout(500);
