@@ -2,7 +2,7 @@
   "name": "stripe-webmcp-stagehand",
   "version": "0.0.0",
   "private": true,
-  "description": "List the WebMCP tools exposed by a Stripe page using Stagehand.",
+  "description": "Pay a Stripe Checkout page using its WebMCP tools and Stagehand.",
   "license": "MIT",
   "type": "module",
   "packageManager": "pnpm@10.32.1",
@@ -16,7 +16,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@browserbasehq/stagehand": "^4.1.0"
+    "@browserbasehq/stagehand": "^4.1.0",
+    "zod": "^4.6.5"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.5.14",

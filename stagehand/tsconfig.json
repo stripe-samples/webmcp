@@ -4,11 +4,12 @@
     "module": "NodeNext",
     "types": ["node"],
     "noEmit": true,
+    "allowImportingTsExtensions": true,
     "strict": true,
     "noUncheckedIndexedAccess": true,
     "verbatimModuleSyntax": true,
     "erasableSyntaxOnly": true,
     "skipLibCheck": true
   },
-  "include": ["index.ts"]
+  "include": ["*.ts"]
 }
