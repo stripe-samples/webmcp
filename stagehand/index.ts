@@ -111,15 +111,8 @@ try {
     throw new Error(`Total ${due.totalAmount} > MAX_TOTAL_MINOR ${maxTotal}`);
   }
 
-  // An email with a Stripe Link account opens a one-time-code modal over the
-  // form. Clicking pay with it open just dismisses the modal.
-  await page.keyPress("Escape");
-  await page.waitForTimeout(1_000);
-
-  const pay = page.locator(".SubmitButton").first();
-  if (!(await pay.isVisible())) throw new Error("Pay button not visible");
   console.log("Paying", due);
-  await pay.click();
+  await mcp(page, "submit_payment");
   await page.waitForTimeout(15_000);
   console.log(await page.url());
   console.log("Final", await summary().catch(() => due));

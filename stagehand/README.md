@@ -1,9 +1,8 @@
 # Check out a Stripe page with WebMCP + Stagehand
 
 Opens a Stripe Checkout page, drives it through its WebMCP tools
-(`select_payment_method`, `fill_payment_form`), clicks the pay button with
-Stagehand, and prints the order from `get_order_summary`. Stripe exposes no
-"pay" tool, so the click is the only step that is not WebMCP.
+(`select_payment_method`, `fill_payment_form`, and `submit_payment`), and
+prints the order from `get_order_summary`.
 
 ## Requirements
 
