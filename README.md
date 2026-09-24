@@ -1,6 +1,6 @@
 # WebMCP
 
-Discover the WebMCP tools exposed by a Stripe page using browser automation frameworks.
+Pay a Stripe Checkout page using its WebMCP tools and browser automation frameworks.
 
 - [Stagehand](./stagehand)
 
