@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@browserbasehq/stagehand':
-        specifier: ^4.1.0
-        version: 4.1.0
+        specifier: 4.2.0
+        version: 4.2.0
       zod:
         specifier: ^4.6.5
         version: 4.6.5
@@ -87,8 +87,8 @@ packages:
   '@browserbasehq/sdk@2.20.0':
     resolution: {integrity: sha512-zDDsgrwF6/iF+Ob0LIqe6EPBa4n7m+5YfKn0g0+kZR5jIncTXBPmJSW6tAsu9go3wA9tQQP+zm6qUOPVi1Gutw==}
 
-  '@browserbasehq/stagehand@4.1.0':
-    resolution: {integrity: sha512-PJikMBVoaCRh6TFD7GcmeISmsMq4IwUu1BD5FOsGUVDUxrVqZomWa6W6dF+a/zu4xRZu2Z2xX1nXVMDaCuZWsw==}
+  '@browserbasehq/stagehand@4.2.0':
+    resolution: {integrity: sha512-jX8i2QPsvcn8KIxEOHJPOiYsrxK0/63t6fMedq0RbHac0zZ4xV1FwWW9YyvgBUucsdUydr0cRlwtAhBbtWxVbw==}
     engines: {node: '>=22.18.0'}
 
   '@opentelemetry/api@1.9.1':
@@ -430,7 +430,7 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  '@browserbasehq/stagehand@4.1.0':
+  '@browserbasehq/stagehand@4.2.0':
     dependencies:
       '@browserbasehq/sdk': 2.20.0
       '@opentelemetry/api': 1.9.1

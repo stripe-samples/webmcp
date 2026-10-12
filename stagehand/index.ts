@@ -22,15 +22,23 @@ if (process.env.CONFIRM_PURCHASE !== "yes") {
 const maxTotal = Number(process.env.MAX_TOTAL_MINOR);
 if (!(maxTotal > 0)) throw new Error("Set MAX_TOTAL_MINOR");
 
-// Stripe registers its tools one by one after load, so poll until this one shows up.
+// Subscribe before discovery so tools registered during the initial lookup aren't missed.
 async function findTool(page: Page, name: string) {
-  const deadline = Date.now() + 30_000;
-  for (;;) {
+  const { promise, resolve, reject } = Promise.withResolvers<WebMCPTool>();
+  const subscription = await page.onToolsAdded((tools) => {
+    const tool = tools.find((t) => t.name === name);
+    if (tool) resolve(tool);
+  });
+  let timer: ReturnType<typeof setTimeout> | undefined;
+  try {
     const tools = await page.tools();
     const tool = tools.find((t) => t.name === name);
-    if (tool) return tool;
-    if (Date.now() > deadline) throw new Error(`No "${name}". Found: ${tools.map((t) => t.name)}`);
-    await page.waitForTimeout(500);
+    if (tool) resolve(tool);
+    timer = setTimeout(() => reject(new Error(`No "${name}"`)), 30_000);
+    return await promise;
+  } finally {
+    clearTimeout(timer);
+    await subscription.unsubscribe();
   }
 }
 
