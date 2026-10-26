@@ -16,7 +16,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@browserbasehq/stagehand": "4.2.0",
+    "@browserbasehq/stagehand": "4.3.0",
     "zod": "^4.6.5"
   },
   "devDependencies": {
