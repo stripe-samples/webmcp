@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@browserbasehq/stagehand':
-        specifier: 4.2.0
-        version: 4.2.0
+        specifier: 4.4.0
+        version: 4.4.0
       zod:
         specifier: ^4.6.5
         version: 4.6.5
@@ -84,11 +84,11 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@browserbasehq/sdk@2.20.0':
-    resolution: {integrity: sha512-zDDsgrwF6/iF+Ob0LIqe6EPBa4n7m+5YfKn0g0+kZR5jIncTXBPmJSW6tAsu9go3wA9tQQP+zm6qUOPVi1Gutw==}
+  '@browserbasehq/sdk@2.25.0':
+    resolution: {integrity: sha512-4sP0wBLS1GlTcCBzJlo8VuQzOULHCSdVtK8scbzVbtFlLy6+H/Rmxwx4sXF21ckY0VM8en1yBqmZLF5z+gzXEQ==}
 
-  '@browserbasehq/stagehand@4.2.0':
-    resolution: {integrity: sha512-jX8i2QPsvcn8KIxEOHJPOiYsrxK0/63t6fMedq0RbHac0zZ4xV1FwWW9YyvgBUucsdUydr0cRlwtAhBbtWxVbw==}
+  '@browserbasehq/stagehand@4.4.0':
+    resolution: {integrity: sha512-Va2HZwdKjmqbCXIMc3wzCcG54hJToscEKoHo+pdRNIKmTqHJDF/ZvqrvMUQbRi8fXtXNncnoo9qhwvlXbsH2SA==}
     engines: {node: '>=22.18.0'}
 
   '@opentelemetry/api@1.9.1':
@@ -101,8 +101,8 @@ packages:
     peerDependencies:
       '@opentelemetry/api': '>=1.0.0 <1.10.0'
 
-  '@opentelemetry/semantic-conventions@1.43.0':
-    resolution: {integrity: sha512-eSYWTm620tTk45EKSedaUL8MFYI8hW164hIXsgIHyxu3VobUB3fFCu5t0hQby6OoWRPsG1KkKUG2M5UadiLiVg==}
+  '@opentelemetry/semantic-conventions@1.45.0':
+    resolution: {integrity: sha512-aOP45mbcOKbQVvFWfQmgoOPT8R2iwbbbgl83k4CujGV9BrJhFr3qG55MFpwFs4YLabpuW3HhzUY9eQxPlDqaZw==}
     engines: {node: '>=14'}
 
   '@types/node-fetch@2.6.13':
@@ -375,11 +375,11 @@ packages:
   whatwg-url@5.0.0:
     resolution: {integrity: sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw==}
 
-  zod@4.4.3:
-    resolution: {integrity: sha512-ytENFjIJFl2UwYglde2jchW2Hwm4GJFLDiSXWdTrJQBIN9Fcyp7n4DhxJEiWNAJMV1/BqWfW/kkg71UDcHJyTQ==}
-
   zod@4.6.5:
     resolution: {integrity: sha512-v5l/aFXZQeai4awLbOpSoHecE9UiMrnfx75tEXLjNonXVARxQ5mOeipTjROUchszUNCqnE+hqAMujRsRHsut2Q==}
+
+  zod@4.6.6:
+    resolution: {integrity: sha512-4UmzQUF5fxvfcYHlbjBmejU+w+hbDnWFx4aS8kBx7nPBHcO2SqPbpAG8snbdg+Xse4pRefR98hgjFgIMCI/UhA==}
 
 snapshots:
 
@@ -418,7 +418,7 @@ snapshots:
   '@biomejs/cli-win32-x64@2.5.14':
     optional: true
 
-  '@browserbasehq/sdk@2.20.0':
+  '@browserbasehq/sdk@2.25.0':
     dependencies:
       '@types/node': 18.19.130
       '@types/node-fetch': 2.6.13
@@ -430,12 +430,12 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  '@browserbasehq/stagehand@4.2.0':
+  '@browserbasehq/stagehand@4.4.0':
     dependencies:
-      '@browserbasehq/sdk': 2.20.0
+      '@browserbasehq/sdk': 2.25.0
       '@opentelemetry/api': 1.9.1
       '@opentelemetry/core': 2.9.0(@opentelemetry/api@1.9.1)
-      zod: 4.4.3
+      zod: 4.6.6
     transitivePeerDependencies:
       - encoding
 
@@ -444,9 +444,9 @@ snapshots:
   '@opentelemetry/core@2.9.0(@opentelemetry/api@1.9.1)':
     dependencies:
       '@opentelemetry/api': 1.9.1
-      '@opentelemetry/semantic-conventions': 1.43.0
+      '@opentelemetry/semantic-conventions': 1.45.0
 
-  '@opentelemetry/semantic-conventions@1.43.0': {}
+  '@opentelemetry/semantic-conventions@1.45.0': {}
 
   '@types/node-fetch@2.6.13':
     dependencies:
@@ -670,6 +670,6 @@ snapshots:
       tr46: 0.0.3
       webidl-conversions: 3.0.1
 
-  zod@4.4.3: {}
-
   zod@4.6.5: {}
+
+  zod@4.6.6: {}
